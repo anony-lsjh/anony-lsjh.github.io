@@ -455,23 +455,24 @@ nav ul li a:hover {
   background-color: #f5f5f5; /* 淡色背景，提升可讀性 */
   padding: 60px 20px; /* 四周留白 */
   border-radius: 10px; /* 圓角邊框 */
-  width: 80%; /* 區塊寬度 */
+  width: 90%; /* 區塊寬度 */
   margin: 0 auto; /* 區塊水平居中 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
   text-align: center; /* 文本居中 */
+  margin-top: 100px; /* 增加页面顶部距离 */
 }
 
 .about-us h1 {
   font-size: 2rem; /* 標題大小 */
   color: #d97824; /* 標題顏色，配合網站整體風格 */
-  margin-bottom: 20px; /* 標題與內容間距 */
+  margin-bottom: 25px; /* 標題與內容間距 */
 }
 
 .about-us p {
   font-size: 1.2rem; /* 內容字體大小 */
   line-height: 1.8; /* 行高，增強可讀性 */
   color: #333; /* 文字顏色 */
-  margin-bottom: 15px; /* 段落之間間距 */
+  margin-bottom: 30px; /* 段落之間間距 */
   white-space: nowrap; /* 禁止段落內的自動換行 */
 }
 
