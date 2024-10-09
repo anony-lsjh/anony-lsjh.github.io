@@ -403,7 +403,6 @@ nav ul li a:hover {
 /* 上篇標頭 */
 /* 調整導航欄樣式 */
 .navbar {
-  display: flex;
   justify-content: space-between; /* 兩端對齊 */
   align-items: center; /* 垂直置中 */
   padding: 10px 50px; /* 調整內邊距 */
