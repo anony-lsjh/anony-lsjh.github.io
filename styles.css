@@ -15,52 +15,7 @@ body {
 }
 
 
-/* 大于1200px的桌面设备 */
-@media (min-width: 1200px) {
-  .container {
-      width: 80%;
-  }
-}
 
-/* 平板设备 (如 iPad) */
-@media (max-width: 768px) {
-  .container {
-      width: 90%;
-      flex-direction: column; /* 将布局改为垂直排列 */
-  }
-
-  .item, .carousel {
-      flex-basis: 100%; /* 每个区块占满宽度 */
-  }
-}
-
-/* 手机设备 (如iPhone) */
-@media (max-width: 480px) {
-  .container {
-      width: 100%;
-      padding: 10px;
-  }
-
-  .item, .carousel {
-      flex-basis: 100%; /* 手机页面上让每个区块占满100%的宽度 */
-  }
-
-  .item img {
-      width: 100%; /* 图片自动适应屏幕宽度 */
-  }
-
-  .carousel img {
-      width: 90%; /* 调整轮播图片的宽度 */
-  }
-
-  h2 {
-      font-size: 18px; /* 调整标题字体大小 */
-  }
-
-  p {
-      font-size: 14px; /* 调整段落字体大小 */
-  }
-}
 
 
 
