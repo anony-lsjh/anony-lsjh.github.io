@@ -1,0 +1,559 @@
+/* 全局設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ebe4e0; /* 背景 */
+  color: #c56f3d;  /* 首頁下方文字 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/* 商店頁面 */
+header {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #ca9c80; /* 背景 */
+  color: #fff;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* 主內容區域美化 */
+main {
+  flex: 1;
+  padding: 20px;
+}
+/* 商品卡片美化 */
+.product-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+
+
+
+/* 我們的服務 */
+.service-title {
+  text-align: center; /* 標題置中 */
+  margin-top: 10px; /* 調整與卡片之間的距離 */
+  margin-bottom: 30px; /* 調整標題與其他內容之間的距離 */
+  font-size: 40px; /* 調整字體大小，原先為默認大小 */
+  font-weight: bold; /* 如果想讓字體更醒目，可以加粗 */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  gap: 40px; /* 調整卡片之間的間距 */
+  flex-wrap: wrap; /* 使卡片可以換行 */
+}
+
+.card {
+  background-color: #ffffff; /* 小視覺背景 */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* 調整卡片寬度 */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #9b6519; /* 文字顏色 */
+  margin-bottom: 15px;
+}
+
+
+        /* 容器样式，控制整体间距 */
+        .container {
+          padding: 40px; /* 容器增加 padding */
+      }
+
+      /* 使用條款按钮样式 */
+      .terms-button {
+          display: inline-block;
+          padding: 15px 30px;
+          font-size: 20px;
+          font-family: 'KaiTi', serif; /* 使用楷体 */
+          color: rgb(255, 255, 255);
+          background-color: #9a621a;
+          border-radius: 10px;
+          cursor: pointer;
+          text-align: center;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          margin-top: 20px; /* 增加按钮的上边距 */
+      }
+
+      /* 悬停效果 */
+      .terms-button:hover {
+          background-color: #653406;
+      }
+
+
+
+
+
+
+/* 頁腳美化 */
+footer {
+  background-color: #ac6727;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px; /* 增加页面顶部距离 */
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+footer p {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+footer a {
+  color: rgb(255, 255, 255); /* 連結顏色 */
+  text-decoration: underline;
+  font-weight: bold; /* 讓連結文字更粗 */
+  font-size: 16px; /* 調整字體大小 */
+}
+
+footer a:hover {
+  color: #ff0000; /* 滑鼠懸停時變紅色 */
+}ßß
+
+
+/* 導覽列懸浮 */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #572705;
+  border-radius: 5px;
+}
+
+
+
+
+/* 基本按鈕樣式 */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* 調整按鈕與上方文字的距離 */
+}
+
+
+
+/* 讓區域填滿整個視窗 */
+.hero-section {
+  background-color: #ebe4e0; /* 背景 */
+  height: 89vh; /* 占滿整個視窗高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: rgb(169, 81, 0);
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+
+
+
+/* 向下的箭頭 */
+.scroll-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid rgb(230, 132, 21);
+  cursor: pointer;
+}
+
+.scroll-arrow:hover {
+  border-top-color: #7e4e1b; /* 鼠標懸停時箭頭變色 */
+}
+
+
+
+
+
+/* 聯絡我們區域的樣式 */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #ebe4e0; /* 背景色 */
+  min-height: 100vh; /* 占滿全高 */
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px; /* 表單最大寬度 */
+  background-color: #fff; /* 表單背景色 */
+  padding: 30px;
+  border-radius: 10px; /* 圓角 */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.contact-form label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #d98d49;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #c45d19;
+}
+
+
+
+
+
+
+/* 匿名區塊 */
+.anonymous-section {
+  background-color: #ebe4e0; /* 背景顏色 */
+  color: rgb(198, 112, 37);
+  padding: 60px 20px;
+  text-align: center; /* 讓文字內容置中 */
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* 讓整個區塊內容置中 */
+}
+
+.anonymous-section h2 {
+  font-size: 50px;
+  color: #de8639; /* 顯眼的標題色 */
+  margin-bottom: 20px;
+}
+
+.anonymous-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* 表單樣式 */
+.anonymous-section form {
+  width: 100%;
+  max-width: 600px; /* 最大寬度 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 輸入框樣式 */
+.anonymous-section textarea {
+  width: 100%; /* 滿寬度 */
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 20px;
+  resize: none; /* 禁止拉伸 */
+  height: 150px; /* 高度設定 */
+}
+
+/* 自定義文件上傳按鈕樣式 */
+.custom-file-upload {
+  background-color: #d98d49; /* 背景色 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.custom-file-upload:hover {
+  background-color: #c45d19; /* 懸浮效果 */
+}
+
+/* 隱藏默認文件輸入樣式 */
+#file-upload {
+  display: none;
+}
+
+/* 發佈按鈕樣式 */
+.btn-anonymous {
+  background-color: #d98d49; /* 按鈕背景色 */
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.btn-anonymous:hover {
+  background-color: #c45d19; /* 懸浮效果 */
+}
+
+
+
+
+/* 上篇標頭 */
+/* 調整導航欄樣式 */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* 兩端對齊 */
+  align-items: center; /* 垂直置中 */
+  padding: 10px 50px; /* 調整內邊距 */
+  background-color: #f6f3f1; /* 背景色 */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center; /* 讓 logo 與文字垂直居中 */
+
+  
+}
+
+.navbar-logo img {
+  height: 60px; /* 調整 logo 高度 */
+  margin-right: 10px; /* logo 與文字之間的距離 */
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none; /* 去掉點 */
+}
+
+.navbar-menu li {
+  margin-left: 20px; /* 每個選項之間的距離 */
+}
+
+.logo-text {
+  font-size: 24px; /* 調整字體大小 */
+  font-weight: bold; /* 如果需要更粗的字體可以加上這一行 */
+  margin-left: 10px; /* 如果文字和 logo 太近，增加間距 */
+}
+
+.navbar-menu a {
+  color: rgb(214, 157, 107);
+  text-decoration: none;
+  font-size: 20px;  /* 文字大小 */
+  padding: 10px 15px; /* 懸浮調整內邊距 */
+}
+
+
+
+
+/* 關於我們區塊 */
+.about-us {
+  background-color: #f5f5f5; /* 淡色背景，提升可讀性 */
+  padding: 60px 20px; /* 四周留白 */
+  border-radius: 10px; /* 圓角邊框 */
+  width: 80%; /* 區塊寬度 */
+  margin: 0 auto; /* 區塊水平居中 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  text-align: center; /* 文本居中 */
+}
+
+.about-us h1 {
+  font-size: 2rem; /* 標題大小 */
+  color: #d97824; /* 標題顏色，配合網站整體風格 */
+  margin-bottom: 20px; /* 標題與內容間距 */
+}
+
+.about-us p {
+  font-size: 1.2rem; /* 內容字體大小 */
+  line-height: 1.8; /* 行高，增強可讀性 */
+  color: #333; /* 文字顏色 */
+  margin-bottom: 15px; /* 段落之間間距 */
+  white-space: nowrap; /* 禁止段落內的自動換行 */
+}
+
+.about-us strong {
+  color: #d97824; /* 強調部分字體顏色 */
+  font-weight: bold; /* 字體加粗 */
+}
+
+
+
+
+/* 關於我們區塊 */
+.about-us {
+  background-color: #f5f5f5; /* 淡色背景，提升可讀性 */
+  padding: 60px 20px; /* 調整四周留白，增加上方空間 */
+  border-radius: 10px; /* 圓角邊框 */
+  width: 90%; /* 區塊寬度 */
+  margin: 60px auto; /* 區塊水平居中，並增加上方的外邊距 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+  text-align: center; /* 文本居中 */
+}
+
+.about-us h1 {
+  font-size: 2rem; /* 標題大小 */
+  color: #d97824; /* 標題顏色 */
+  margin-bottom: 20px; /* 標題與內容間距 */
+}
+
+.about-us p {
+  font-size: 1.2rem; /* 內容字體大小 */
+  line-height: 4; /* 行高，增強可讀性 */
+  color: #333; /* 文字顏色 */
+  margin-bottom:1px; /* 段落之間間距 */
+  white-space: normal; /* 允許段落自動換行 */
+}
+
+.about-us strong {
+  color: #d97824; /* 強調部分字體顏色 */
+  font-weight: bold; /* 字體加粗 */
+}
+
+
+
+
+
+/* 使用規則 */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 50px; /* 增加页面顶部距离 */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #555;
+  margin-top: 20px;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+strong {
+  color: #333;
+}
+
+/* 如果你只想让某些部分的文字是红色，可以使用 class */
+.red-text {
+  color: red;
+}
