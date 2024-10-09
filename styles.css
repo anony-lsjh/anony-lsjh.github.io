@@ -519,10 +519,10 @@ nav ul li a:hover {
   max-width: 800px;
   margin: 0 auto;
   background-color: #fff;
-  padding: 20px;
+  padding: 50px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin-top: 50px; /* 增加页面顶部距离 */
+  margin-top: 100px; /* 增加页面顶部距离 */
 }
 
 h1 {
