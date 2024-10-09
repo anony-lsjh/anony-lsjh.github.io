@@ -403,6 +403,7 @@ nav ul li a:hover {
 /* 上篇標頭 */
 /* 調整導航欄樣式 */
 .navbar {
+  display: flex;
   justify-content: space-between; /* 兩端對齊 */
   align-items: center; /* 垂直置中 */
   padding: 10px 50px; /* 調整內邊距 */
@@ -565,19 +566,6 @@ strong {
 
 
 /* 會考 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 20px;
-}
-
 /* 新增的间隔样式 */
 .section {
   margin-bottom: 60px; /* 每个部分之间的底部间隔，确保前后段有空隙 */
