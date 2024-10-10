@@ -701,11 +701,94 @@ strong {
 
 
 
-
-
-
 /* 會考 */
 /* 新增的间隔样式 */
 .section {
   margin-bottom: 60px; /* 每个部分之间的底部间隔，确保前后段有空隙 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 手機頁面設置，適用於螢幕寬度小於 768px */
+@media (max-width: 768px) {
+  /* 全局調整：減小頁面內距、調整文字大小 */
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 14px;
+  }
+
+  /* 主要內容區域調整 */
+  main {
+    padding: 10px;
+  }
+
+  /* 商品區域調整 */
+  .product-section {
+    flex-direction: column; /* 手機顯示時垂直排列 */
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* 調整卡片寬度，使其適合手機 */
+  }
+
+  .service-title {
+    font-size: 32px; /* 調整標題字體大小 */
+  }
+
+  /* 匿名區塊 */
+  .anonymous-section h2 {
+    font-size: 36px;
+  }
+
+  .anonymous-section p {
+    font-size: 16px;
+  }
+
+  /* 社群連結區域 */
+  .social-links-grid {
+    flex-direction: column; /* 手機上垂直排列社群按鈕 */
+  }
+
+  .social-link-item img {
+    width: 80px; /* 調整圖片大小 */
+    height: 80px;
+  }
+
+  /* 會考專區卡片調整 */
+  .grid-container-exam {
+    grid-template-columns: 1fr; /* 變為單欄佈局 */
+  }
+
+  .grid-item-exam {
+    width: 100%; /* 卡片寬度全屏適應 */
+  }
+  
+  /* 導覽列 */
+  .navbar-menu {
+    flex-direction: column; /* 手機上垂直排列導覽列選項 */
+    align-items: center;
+  }
+
+  .navbar-menu li {
+    margin-bottom: 10px; /* 每個選項之間增加空隙 */
+  }
 }
