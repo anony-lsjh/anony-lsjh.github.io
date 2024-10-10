@@ -467,7 +467,7 @@ body {
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .about-us h1 {
@@ -543,9 +543,9 @@ body {
 }
 
 .social-links-section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #d97824;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .social-links-grid {
@@ -556,8 +556,8 @@ body {
 }
 
 .social-link-item img {
-  width: 60px; /* 圖片大小 */
-  height: 60px;
+  width: 100px; /* 圖片大小 */
+  height: 100px;
   transition: transform 0.3s ease;
 }
 
