@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page Example</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #444;
+            padding: 10px;
+        }
+        .nav-items {
+            display: none; /* 隱藏於手機端 */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .column img {
+            width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* 手機樣式 */
+        @media (max-width: 768px) {
+            nav .nav-items {
+                display: block;
+            }
+
+            .content {
+                display: block;
+            }
+
+            .column {
+                width: 100%;
+            }
+
+            .collapse-btn {
+                display: block;
+                cursor: pointer;
+                color: white;
+                background-color: #444;
+                padding: 10px;
+                text-align: center;
+                border: none;
+                width: 100%;
+            }
+        }
+
+        /* 隱藏與顯示功能 */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Responsive Layout</h1>
+    </header>
+
+    <nav>
+        <span class="collapse-btn" onclick="toggleMenu()">☰ Menu</span>
+        <div class="nav-items hidden" id="navMenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>This is some content in the first column.</p>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+        </div>
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>This is some content in the second column.</p>
+            <img src="https://via.placeholder.com/300" alt="Placeholder Image">
+        </div>
+    </section>
+
+    <footer>
+        <p>Footer Content</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var navMenu = document.getElementById('navMenu');
+            if (navMenu.classList.contains('hidden')) {
+                navMenu.classList.remove('hidden');
+            } else {
+                navMenu.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
