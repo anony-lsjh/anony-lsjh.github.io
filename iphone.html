@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Page Example</title>
+    <title>Responsive Layout Example</title>
     <style>
         /* 基本樣式 */
         body {
@@ -13,71 +13,80 @@
         }
         header {
             background-color: #333;
-            color: #fff;
-            padding: 10px;
+            color: white;
+            padding: 15px;
             text-align: center;
         }
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             background-color: #444;
             padding: 10px;
-        }
-        .nav-items {
-            display: none; /* 隱藏於手機端 */
         }
         nav a {
             color: white;
             text-decoration: none;
             padding: 10px;
+            display: inline-block;
+        }
+        .collapse-btn {
+            display: none;
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+        .nav-items {
+            display: flex;
+            justify-content: space-around;
         }
 
+        /* 內容區域 */
         .content {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: space-between;
             padding: 20px;
         }
         .column {
-            flex: 1;
-            padding: 10px;
+            width: 45%;
             box-sizing: border-box;
         }
         .column img {
             width: 100%;
             height: auto;
         }
-
         footer {
             background-color: #333;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 10px;
         }
 
-        /* 手機樣式 */
+        /* 手機響應式設計 */
         @media (max-width: 768px) {
-            nav .nav-items {
+            .nav-items {
+                display: none; /* 默認隱藏導覽列 */
+                flex-direction: column;
+            }
+
+            .collapse-btn {
                 display: block;
+            }
+
+            .nav-items a {
+                padding: 15px;
+                text-align: center;
+                background-color: #444;
+                border-bottom: 1px solid #555;
             }
 
             .content {
                 display: block;
             }
-
             .column {
                 width: 100%;
-            }
-
-            .collapse-btn {
-                display: block;
-                cursor: pointer;
-                color: white;
-                background-color: #444;
-                padding: 10px;
-                text-align: center;
-                border: none;
-                width: 100%;
+                margin-bottom: 20px;
             }
         }
 
@@ -94,8 +103,8 @@
     </header>
 
     <nav>
-        <span class="collapse-btn" onclick="toggleMenu()">☰ Menu</span>
-        <div class="nav-items hidden" id="navMenu">
+        <button class="collapse-btn" onclick="toggleMenu()">☰ Menu</button>
+        <div class="nav-items" id="navMenu">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
@@ -122,12 +131,13 @@
     <script>
         function toggleMenu() {
             var navMenu = document.getElementById('navMenu');
-            if (navMenu.classList.contains('hidden')) {
-                navMenu.classList.remove('hidden');
+            if (navMenu.style.display === "none" || navMenu.style.display === "") {
+                navMenu.style.display = "flex";
             } else {
-                navMenu.classList.add('hidden');
+                navMenu.style.display = "none";
             }
         }
     </script>
+
 </body>
 </html>
