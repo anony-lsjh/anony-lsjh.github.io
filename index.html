@@ -4,38 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>告白立新 - 首頁</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 漢堡按鈕樣式 */
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+            background-color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 側邊選單樣式 */
+        .side-nav {
+            position: fixed;
+            left: -250px; /* 初始位置隱藏 */
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .side-nav ul li {
+            margin: 20px 0;
+        }
+
+        .side-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* 展開側邊選單 */
+        .side-nav.open {
+            left: 0;
+        }
+
+        /* 當側邊選單打開時，漢堡按鈕變成白色 */
+        .side-nav.open ~ .menu-toggle span {
+            background-color: white;
+        }
+
+        /* Logo 靠右對齊 */
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            justify-content: flex-end; /* 將 logo 靠右對齊 */
+        }
+
+        .navbar-logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* 服務區塊 */
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        /* Footer樣式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+    </style>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="navbar-logo">
-        <img src="告白立新LOGO.png" alt="Logo">
-        <h1>告白立新</h1>
+    <!-- 漢堡按鈕 -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    <ul class="navbar-menu">
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="maskseal.html">匿名系統介紹</a></li>
-        <li><a href="regulations.html">使用條款</a></li>
-        <li><a href="text.html">會考資訊</a></li>
-        <li><a href="shop.html">商店</a></li>
-        <li><a href="anonymous.html">匿名區</a></li>
-        <li><a href="contact.html">聯絡我們</a></li>
-    </ul>
-</nav>
 
+    <!-- 側邊選單 -->
+    <nav class="side-nav" id="sideNav">
+        <div class="navbar-logo">
+            <img src="告白立新LOGO.png" alt="Logo">
+            <h1>告白立新</h1>
+        </div>
+        <ul>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="maskseal.html">匿名系統介紹</a></li>
+            <li><a href="regulations.html">使用條款</a></li>
+            <li><a href="text.html">會考資訊</a></li>
+            <li><a href="shop.html">商店</a></li>
+            <li><a href="anonymous.html">匿名區</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要內容 -->
     <header class="hero-section">
-      <div class="hero-content">
-          <h1>歡迎來到告白立新</h1>
-          <p>匿名交流的平台，為你提供安心的空間。</p>
-          <a href="anonymous.html" class="btn btn-anonymous">匿名區</a>
-      </div>
-      <div class="scroll-arrow"></div>
-  </header>
-  
+        <div class="hero-content">
+            <h1>歡迎來到告白立新</h1>
+            <p>匿名交流的平台，為你提供安心的空間。</p>
+            <a href="anonymous.html" class="btn btn-anonymous">匿名區</a>
+        </div>
+    </header>
 
-
-      <main>
+    <main>
         <h2 class="service-title">我們的服務</h2>
         <div class="card-container">
             <div class="card">
@@ -65,20 +171,30 @@
         </div>
     </main>
 
-
-
-  </main>
     <footer>
         <div class="social-links">
             <h3>追蹤我們</h3>
             <a href="https://www.instagram.com/anony_lsjh">Instagram</a>
-                <a href="https://www.facebook.com/share/wYebae1Ng7HufHea/?mibextid=LQQJ4d">Facebook</a>
-                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=072bowlf">Line</a>
-                <a href="https://www.threads.net/@anony_lsjh?xmt=AQGzQmAjyo4V2XjbBSyGGsBOCA0te0N1IhOW0UAyIl9oo3M">Threads</a>
-            </div>
+            <a href="https://www.facebook.com/share/wYebae1Ng7HufHea/?mibextid=LQQJ4d">Facebook</a>
+            <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=072bowlf">Line</a>
+            <a href="https://www.threads.net/@anony_lsjh?xmt=AQGzQmAjyo4V2XjbBSyGGsBOCA0te0N1IhOW0UAyIl9oo3M">Threads</a>
+        </div>
         <p>Gmail: <a href="mailto:lsjh8787@gmail.com">lsjh8787@gmail.com</a></p>
         <p>© 2024 告白立新. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript 用來控制側邊欄開關 -->
+    <script>
+        function toggleMenu() {
+            var sideNav = document.getElementById('sideNav');
+            if (sideNav.classList.contains('open')) {
+                sideNav.classList.remove('open');
+            } else {
+                sideNav.classList.add('open');
+            }
+        }
+    </script>
+    
 </body>
 </html>
+
