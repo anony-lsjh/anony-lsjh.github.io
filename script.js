@@ -1,3 +1,6 @@
+// what a shit code is tf
+
+
 const messages = [
   { text: '这是第一条即时消息！', imageUrl: 'path-to-image-1.jpg' },
   { text: '这是第二条即时消息！', imageUrl: 'path-to-image-2.jpg' },
@@ -6,7 +9,6 @@ const messages = [
 
 const liveMessagesContainer = document.getElementById('live-messages');
 
-// 动态插入消息内容
 messages.forEach((message) => {
   const messageDiv = document.createElement('div');
   messageDiv.classList.add('message');
@@ -31,3 +33,4 @@ window.onscroll = function() {
       nav.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
   }
 }
+

@@ -5,29 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>告白立新 - 使用條款</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+            background-color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .side-nav {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .side-nav ul li {
+            margin: 20px 0;
+        }
+
+        .side-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .side-nav.open {
+            left: 0;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            top: 20px;
+            left: -10px;
+        }
+
+        .navbar-logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .contact-section {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin: 40px 0;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="side-nav" id="sideNav">
+        <div class="navbar-logo">
+            <img src="../image/logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../about/about.html">關於我們</a></li>
+            <li><a href="../maskseal/maskseal.html">匿名系統介紹</a></li>
+            <li><a href="../text/text.html">會考資訊</a></li>
+            <li><a href="../shop/shop.html">商店</a></li>
+            <li><a href="https://txg-lsjh.forteens.cc">匿名區</a></li>
+            <li><a href="../contact/contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
 
-    <nav class="navbar">
-      <div class="navbar-logo">
-          <img src="告白立新LOGO.png" alt="Logo">
-          <h1>告白立新</h1>
-      </div>
-      <ul class="navbar-menu">
-        <li><a href="index.html">首頁</a></li>
-          <li><a href="about.html">關於我們</a></li>
-          <li><a href="maskseal.html">匿名系統介紹</a></li>
-          <li><a href="text.html">會考資訊</a></li>
-          <li><a href="shop.html">商店</a></li>
-          <li><a href="anonymous.html">匿名區</a></li>
-          <li><a href="contact.html">聯絡我們</a></li>
-      </ul>
-  </nav>
-
-
-
-<body>
     <div class="container">
         <h1>告白立新 使用條款</h1>
         <p><strong>訂定日期:</strong> 7月21日</p>
@@ -52,7 +172,7 @@
         <p>參見《個人資料保護法》之特定目的及個人資料之類別。</p>
         <ul>
             <strong>蒐集目的：</strong>
-                 <ul>
+                <ul>
                     <li>行銷（特定目的項目 040）</li>
                     <li>會員或其他成員名冊之內部管理（特定目的項目 052）</li>
                     <li>公務機關依法定義務所進行個人資料之蒐集處理及利用（特定目的項目 063）</li>
@@ -96,7 +216,6 @@
                     <li>請求停止蒐集、處理或利用。</li>
                     <li>請求刪除。</li>
                 </ul>
-            
             <strong>如您拒絕提供部分個人資料，您可能無法使用本服務。</strong>
 
         
@@ -174,15 +293,12 @@
             <li>本協議並未將權利授與任何第三方。</li>
         </ul>
 
-
-
         <h2>拾伍、聯繫我們</h2>
         <p>若您對使用條款有任何疑問或需要協助，請隨時聯繫我們的客服團隊，我們將竭誠為您服務。</p>
         <p>Instagram官方帳號: <a href="https://www.instagram.com/anony_lsjh">anony_lsjh</a></p>
         <p>Email: <a href="mailto:lsjh8787@gmail.com">lsjh8787@gmail.com</a></p>
         <p>感謝您選擇『告白立新❤️』，讓我們共同營造一個和平、友善的匿名社群！</p>
     </div>
-
 </main>
 <footer>
     <div class="social-links">
@@ -195,6 +311,12 @@
     <p>Gmail: <a href="mailto:lsjh8787@gmail.com">lsjh8787@gmail.com</a></p>
     <p>© 2024 告白立新. All rights reserved.</p>
 </footer>
-
+<script>
+    function toggleMenu() {
+        const sideNav = document.getElementById('sideNav');
+        sideNav.classList.toggle('open');
+    }
+</script>
 </body>
 </html>
+
