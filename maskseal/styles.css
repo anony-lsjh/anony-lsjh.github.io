@@ -201,7 +201,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-  margin-top: 50px; /* 增加页面顶部距离 */
+  margin-top: 50px;
 }
 
 footer .social-links a {
@@ -225,7 +225,7 @@ footer a {
 
 footer a:hover {
   color: #ffa735; /* 滑鼠懸停時變紅色 */
-}ßß
+}
 
 
 /* 導覽列懸浮 */
