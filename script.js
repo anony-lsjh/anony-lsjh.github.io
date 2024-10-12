@@ -34,12 +34,3 @@ window.onscroll = function() {
   }
 }
 
-function toggleMenu() {
-  var sideNav = document.getElementById('sideNav');
-  if (sideNav.classList.contains('open')) {
-      sideNav.classList.remove('open');
-  } else {
-      sideNav.classList.add('open');
-  }
-}
-

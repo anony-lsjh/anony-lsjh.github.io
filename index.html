@@ -1,5 +1,4 @@
-<!-- 
--->
+<!-- Powered, fixed by Tempura. -->
 
 
 <!DOCTYPE html>
@@ -111,7 +110,7 @@
 </head>
 <body>
     <!-- 漢堡按鈕 -->
-    <div class="menu-toggle" onclick="this.toggleMenu()">
+    <div class="menu-toggle" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
@@ -129,7 +128,10 @@
             <li><a href="./regulations/regulations.html">使用條款</a></li>
             <li><a href="./text/text.html">會考資訊</a></li>
             <li><a href="./shop/shop.html">商店</a></li>
-            <li><a href="./anonymous.html">匿名區</a></li>
+
+            <!--<li><a href="./anonymous.html">匿名區</a></li>-->
+            <li><a href="https://txg-lsjh.forteens.cc">匿名區</a></li>
+
             <li><a href="./contact/contact.html">聯絡我們</a></li>
         </ul>
     </nav>
@@ -138,7 +140,8 @@
         <div class="hero-content">
             <h1>歡迎來到告白立新</h1>
             <p>匿名交流的平台，為你提供安心的空間。</p>
-            <a href="./anonymous.html" class="btn btn-anonymous">匿名區</a>
+            <!--<a href="./anonymous.html" class="btn btn-anonymous">匿名區</a>-->
+            <a href="https://txg-lsjh.forteens.cc" class="btn btn-anonymous">匿名區</a>
         </div>
     </header>
 
@@ -146,16 +149,17 @@
         <h2 class="service-title">我們的服務</h2>
         <div class="card-container">
             <div class="card">
-                <img src="./image/使用條款.png" alt="告白立新-使用條款">
+                <img src="./image/terms.png" alt="告白立新-使用條款">
                 <h3>告白立新-使用條款</h3>
                 <p>請詳讀此使用條款並遵守相關規定</p>
                 <a href="./regulations/regulations.html" class="terms-button">使用條款</a>
             </div>
             <div class="card">
-                <img src="./image/匿名按這.png" alt="告白立新-匿名區">
+                <img src="./image/anonymous.png" alt="告白立新-匿名區">
                 <h3>告白立新-匿名區</h3>
                 <p>立新學生的匿名心聲站</p>
-                <a href="./anonymous.html" class="terms-button">匿名按這</a>
+                <!--<a href="./anonymous.html" class="terms-button">匿名按這</a>-->
+                <a href="https://txg-lsjh.forteens.cc" class="terms-button">匿名按這</a>
             </div>
             <div class="card">
                 <img src="./image/infomation.png" alt="告白立新-會考資訊">
@@ -184,7 +188,17 @@
         <p>© 2024 告白立新. All rights reserved.</p>
     </footer>
 
-    <script></script>
+    <script>
+        function toggleMenu() {
+            var sideNav = document.getElementById('sideNav');
+            if (sideNav.classList.contains('open')) {
+                sideNav.classList.remove('open');
+            } else {
+                sideNav.classList.add('open');
+            }
+        }
+    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
 
