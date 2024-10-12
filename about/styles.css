@@ -225,7 +225,7 @@ footer a {
 
 footer a:hover {
   color: #ffa735; /* 滑鼠懸停時變紅色 */
-}ßß
+}
 
 
 /* 導覽列懸浮 */
@@ -544,6 +544,13 @@ body {
   align-items: center;
   width: 80%;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .grid-item {
