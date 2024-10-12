@@ -1,115 +1,188 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>告白立新 - 關於我們</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 5px;
+            background-color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        .side-nav {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 20px;
+        }
+
+        .side-nav ul li {
+            margin: 20px 0;
+        }
+
+        .side-nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .side-nav.open {
+            left: 0;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+            top: 20px;
+            left: -10px;
+        }
+
+        .navbar-logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-logo">
-        <img src="../image/logo.png" alt="Logo">
-        <h1>告白立新-關於我們</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    <ul class="navbar-menu">
-        <li><a href="../index.html">首頁</a></li>
-        <li><a href="../maskseal/maskseal.html">匿名系統介紹</a></li>
-        <li><a href="../regulations/regulations.html">使用條款</a></li>
-        <li><a href="../text/text.html">會考資訊</a></li>
-        <li><a href="../shop/shop.html">商店</a></li>
-        <li><a href="https://txg-lsjh.forteens.cc">匿名區</a></li>
-        <li><a href="../contact/contact.html">聯絡我們</a></li>
-    </ul>
-  </nav>
+    <nav class="side-nav" id="sideNav">
+        <div class="navbar-logo">
+            <img src="../image/logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="../index.html">首頁</a></li>
+            <li><a href="../maskseal/maskseal.html">匿名系統介紹</a></li>
+            <li><a href="../regulations/regulations.html">使用條款</a></li>
+            <li><a href="../text/text.html">會考資訊</a></li>
+            <li><a href="../shop/shop.html">商店</a></li>
+            <li><a href="https://txg-lsjh.forteens.cc">匿名區</a></li>
+            <li><a href="../contact/contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
 
+    <section class="about-us">
+      <h1>關於我們</h1>
+      <p><strong>『告白立新』</strong> 是立新國中專屬的匿名社群平台，特別為學生們設計，提供一個安全、友善的空間，讓大家可以無壓力地分享心聲和感受。</p>
+      <p>我們深知學生的心情與需求，致力於為大家營造一個和平、支持的社群環境，讓每個人都能在這裡找到理解和關懷。</p>
+      <p>我們希望這個平台能成為同學們心靈的避風港，無論是傾訴煩惱還是分享喜悅，這裡都將是您信賴的夥伴。</p>
+    </section>
 
+    <section class="social-links-section">
+        <h2>追蹤我們的社群平台</h2>
+        <div class="social-links-grid">
+            <div class="social-link-item">
+                <a href="https://www.facebook.com/share/wYebae1Ng7HufHea/?mibextid=LQQJ4d" target="_blank">
+                    <img src="../image/FB_removeBG.png" alt="Facebook">
+                </a>
+            </div>
+            <div class="social-link-item">
+                <a href="https://www.threads.net/@anony_lsjh?xmt=AQGzQmAjyo4V2XjbBSyGGsBOCA0te0N1IhOW0UAyIl9oo3M" target="_blank">
+                    <img src="../image/Treads.png" alt="Threads">
+                </a>
+            </div>
+            <div class="social-link-item">
+                <a href="https://www.instagram.com/anony_lsjh" target="_blank">
+                    <img src="../image/IG_removeBG.png" alt="Instagram">
+                </a>
+            </div>
+            <div class="social-link-item">
+                <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=072bowlf" target="_blank">
+                    <img src="../image/LINE_removeBG.png" alt="Line">
+                </a>
+            </div>
+            <div class="social-link-item">
+                <a href="https://line.me/ti/g2/Y6X1_PTrIfExfvwVvepE_2m0yZF82BYudj-sOQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">
+                    <img src="../image/idk_removeBG.png" alt="Line.me">
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- why so many \n -->
+    <section class="image-section">
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="../image/schoolLogo.jpg" alt="學校校徽" class="logos">
+                <h2>立新國中</h2>
+                <p>立新國中致力於提供優質教育，培養學生多元發展。</p>
+                <p>我們鼓勵自主學習與創新思維，促進全人成長。</p>
+                <P>秉持校訓精神，讓每位學生發揮無限潛力。</P>
+                <p>上方七圓象徵九年一貫課程的七大領域圓滿達成</p>
+                <p>黃環立人融合舊台中縣徽與大里市徽</p>
+                <p>蘊涵鄉土情懷古字立新象徵著傳承優良傳統</p>
+                <p>以藍為底象徵著自由思考、創新教學</p>
+                <p>2000/8/1</p>
+            </div>
 
+            <div class="grid-item">
+                <img src="../image/logo.png" alt="社群Logo" class="logos">
+                <h2>告白立新</h2>
+                <p>LOGO 的設計理念是將「告白立新」和立新國中的元素結合在一起</p>
+                <p>左半部分的愛心保留了原始的形狀，代表著愛與情感</p>
+                <p>右半部分則融入了立新國中的英文開頭L和S</p>
+                <p>同時在L的尾端以邱比特的弓箭作為收尾，象徵著愛情的箭矢。</p>
+                <p>在愛心的中間加入了我們的社群名</p>
+                <p>左半愛心內加上了IG帳號名</p>
+                <p>右半愛心的邊緣則標示了社群的創辦日期</p>
+                <p>2024/3/20</p>
+            </div>
+        </div>
+    </section>
 
-
-
-  <section class="social-links-section">
-    <h2>追蹤我們的社群平台</h2>
-    <div class="social-links-grid">
-      <div class="social-link-item">
-        <a href="https://www.facebook.com/share/wYebae1Ng7HufHea/?mibextid=LQQJ4d" target="_blank">
-          <img src="../image/FB_removeBG.png" alt="Facebook">
-        </a>
-      </div>
-
-      <div class="social-link-item">
-        <a href="https://www.threads.net/@anony_lsjh?xmt=AQGzQmAjyo4V2XjbBSyGGsBOCA0te0N1IhOW0UAyIl9oo3M" target="_blank">
-          <img src="../image/Treads.png" alt="Threads">
-        </a>
-      </div>
-
-      <div class="social-link-item">
-        <a href="https://www.instagram.com/anony_lsjh" target="_blank">
-          <img src="../image/IG_removeBG.png" alt="Instagram">
-        </a>
-      </div>
-
-      <div class="social-link-item">
-        <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=072bowlf" target="_blank">
-          <img src="../image/LINE_removeBG.png" alt="Line">
-        </a>
-      </div>
-
-      <div class="social-link-item">
-        <a href="https://line.me/ti/g2/Y6X1_PTrIfExfvwVvepE_2m0yZF82BYudj-sOQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">
-          <img src="../image/idk_removeBG.png" alt="Line.me">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-us">
-    <h1>關於我們</h1>
-    <p><strong>『告白立新』</strong> 是立新國中專屬的匿名社群平台，特別為學生們設計，提供一個安全、友善的空間，讓大家可以無壓力地分享心聲和感受。</p>
-    <p>我們深知學生的心情與需求，致力於為大家營造一個和平、支持的社群環境，讓每個人都能在這裡找到理解和關懷。</p>
-    <p>我們希望這個平台能成為同學們心靈的避風港，無論是傾訴煩惱還是分享喜悅，這裡都將是您信賴的夥伴。</p>
-  </section>
-  
-  <section class="image-section">
-    <div class="grid-container">
-      <div class="grid-item">
-        <img src="../image/schoolLogo.jpg" alt="學校校徽" class="logos">
-        <h2>立新國中</h2>
-        <p>上方七圓象徵九年一貫課程的七大領域圓滿達成</p>
-        <p>黃環立人融合舊台中縣徽與大里市徽</p>
-        <p>蘊涵鄉土情懷古字立新象徵著傳承優良傳統</p>
-        <p>以藍為底象徵著自由思考、創新教學</p>
-        <p>2000/8/1</p>
-      </div>
-      
-      <div class="grid-item">
-        <img src="../image/logo.png" alt="社群Logo" class="logos">
-        <h2>告白立新</h2>
-        <p>LOGO 的設計理念是將「告白立新」和立新國中的元素結合在一起</p>
-        <p>左半部分的愛心保留了原始的形狀，代表著愛與情感</p>
-        <p>右半部分則融入了立新國中的英文開頭L和S</p>
-        <p>同時在L的尾端以邱比特的弓箭作為收尾，象徵著愛情的箭矢。</p>
-        <p>在愛心的中間加入了我們的社群名</p>
-        <p>左半愛心內加上了IG帳號名</p>
-        <p>右半愛心的邊緣則標示了社群的創辦日期</p>
-        <p>2024/3/20</p>
-      </div>
-    </div>
-  </section>
-</main>
-<footer>
-    <div class="social-links">
-        <h3>追蹤我們</h3>
-        <a href="https://www.instagram.com/anony_lsjh">Instagram</a>
+    <footer>
+        <div class="social-links">
+            <h3>追蹤我們</h3>
+            <a href="https://www.instagram.com/anony_lsjh">Instagram</a>
             <a href="https://www.facebook.com/share/wYebae1Ng7HufHea/?mibextid=LQQJ4d">Facebook</a>
             <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=072bowlf">Line</a>
             <a href="https://www.threads.net/@anony_lsjh?xmt=AQGzQmAjyo4V2XjbBSyGGsBOCA0te0N1IhOW0UAyIl9oo3M">Threads</a>
         </div>
-    <p>Gmail: <a href="mailto:lsjh8787@gmail.com">lsjh8787@gmail.com</a></p>
-    <p>© 2024 告白立新. All rights reserved.</p>
-</footer>
+        <p>Gmail: <a href="mailto:lsjh8787@gmail.com">lsjh8787@gmail.com</a></p>
+        <p>© 2024 告白立新. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const sideNav = document.getElementById('sideNav');
+            sideNav.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
 

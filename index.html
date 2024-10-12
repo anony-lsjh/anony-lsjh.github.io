@@ -8,14 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>告白立新 - 首頁</title>
     <style>
-        /* 基本樣式 */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        /* 漢堡按鈕樣式 */
         .menu-toggle {
             position: fixed;
             top: 20px;
@@ -34,10 +32,9 @@
             transition: background-color 0.3s ease;
         }
 
-        /* 側邊選單樣式 */
         .side-nav {
             position: fixed;
-            left: -250px; /* 初始位置隱藏 */
+            left: -250px;
             top: 0;
             width: 250px;
             height: 100%;
@@ -62,22 +59,17 @@
             font-size: 18px;
         }
 
-        /* 展開側邊選單 */
         .side-nav.open {
             left: 0;
         }
 
-        /* 當側邊選單打開時，漢堡按鈕變成白色 */
-        .side-nav.open ~ .menu-toggle span {
-            background-color: white;
-        }
-
-        /* Logo 靠右對齊 */
         .navbar-logo {
             display: flex;
             align-items: center;
-            padding: 40px;
-            justify-content: flex-end; /* 將 logo 靠右對齊 */
+            justify-content: flex-end;
+            position: relative;
+            top: 20px;
+            left: -10px;
         }
 
         .navbar-logo img {
@@ -85,14 +77,12 @@
             margin-right: 10px;
         }
 
-        /* 服務區塊 */
         .card-container {
             display: flex;
             justify-content: space-around;
             padding: 20px;
         }
 
-        /* Footer樣式 */
         footer {
             background-color: #333;
             color: white;
@@ -109,18 +99,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 漢堡按鈕 -->
     <div class="menu-toggle" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
     </div>
-
-    <!-- 側邊選單 -->
     <nav class="side-nav" id="sideNav">
         <div class="navbar-logo">
             <img src="./image/logo.png" alt="Logo">
-            <h1>告白立新</h1>
         </div>
         <ul>
             <li><a href="./about/about.html">關於我們</a></li>
