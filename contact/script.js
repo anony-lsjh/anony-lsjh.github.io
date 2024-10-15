@@ -1,49 +1,5 @@
 // this is simple check db also need one too
+// this is also obfed
 
-document.querySelector('.contact-form').addEventListener('submit', function (event) {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    const suspiciousPattern = /['"<>;=()--]|(\b(drop|select|insert|delete|update|alter|create|shutdown|truncate|exec)\b)/i;
-
-    const suspiciousWords = [
-        "'", '"', ";", "--", "/*", "*/", "DROP", "SELECT", "INSERT", "DELETE", 
-        "UPDATE", "ALTER", "CREATE", "SHUTDOWN", "TRUNCATE", "EXEC"
-    ];
-
-    function containsSuspiciousWord(input) {
-        return suspiciousWords.some(word => input.toUpperCase().includes(word));
-    }
-
-    if (name === '') {
-        alert('請輸入您的暱稱');
-        event.preventDefault();
-        return;
-    }
-
-    if (email === '') {
-        alert('請輸入您的電子郵件');
-        event.preventDefault();
-        return;
-    }
-
-    if (message === '') {
-        alert('請輸入您的訊息');
-        event.preventDefault();
-        return;
-    }
-
-    if (suspiciousPattern.test(name) || suspiciousPattern.test(email) || suspiciousPattern.test(message)) {
-        alert('您的輸入包含不允許的字元或關鍵字');
-        event.preventDefault();
-        return;
-    }
-
-    if (containsSuspiciousWord(name) || containsSuspiciousWord(email) || containsSuspiciousWord(message)) {
-        alert('您的輸入包含不允許的字元或關鍵字');
-        event.preventDefault();
-        return;
-    }
-});
+function _0x4772(){const _0x3ed1f5=['203MgCDdX','UPDATE','DELETE','您的輸入包含不允許的字元或關鍵字','115146PyGgiD','querySelector','preventDefault','includes','trim','6crdoLQ','SHUTDOWN','請輸入您的暱稱','1008JyeHjp','請輸入您的電子郵件','INSERT','test','310zcffbG','message','getElementById','value','4866655LvRYId','2130696fqAPOv','toUpperCase','201311LrNrFL','some','CREATE','3714864gELcpz','name','344088oBaEUm','EXEC','.contact-form','addEventListener','206249TFUwJU','請輸入您的訊息','submit','DROP'];_0x4772=function(){return _0x3ed1f5;};return _0x4772();}function _0x34b3(_0x53517c,_0x2e2113){const _0x4772c9=_0x4772();return _0x34b3=function(_0x34b387,_0xd31af6){_0x34b387=_0x34b387-0x16d;let _0x4d8fa5=_0x4772c9[_0x34b387];return _0x4d8fa5;},_0x34b3(_0x53517c,_0x2e2113);}const _0x148b60=_0x34b3;(function(_0x3cec62,_0x3e2ce4){const _0x59041a=_0x34b3,_0x1f0593=_0x3cec62();while(!![]){try{const _0xeb282a=-parseInt(_0x59041a(0x183))/0x1*(-parseInt(_0x59041a(0x190))/0x2)+parseInt(_0x59041a(0x17d))/0x3+-parseInt(_0x59041a(0x178))/0x4+-parseInt(_0x59041a(0x177))/0x5+-parseInt(_0x59041a(0x17f))/0x6*(parseInt(_0x59041a(0x187))/0x7)+parseInt(_0x59041a(0x16f))/0x8*(parseInt(_0x59041a(0x18b))/0x9)+parseInt(_0x59041a(0x173))/0xa*(parseInt(_0x59041a(0x17a))/0xb);if(_0xeb282a===_0x3e2ce4)break;else _0x1f0593['push'](_0x1f0593['shift']());}catch(_0x1043c6){_0x1f0593['push'](_0x1f0593['shift']());}}}(_0x4772,0xd3bf1),document[_0x148b60(0x18c)](_0x148b60(0x181))[_0x148b60(0x182)](_0x148b60(0x185),function(_0x4f5c52){const _0x30a71e=_0x148b60,_0x29814b=document[_0x30a71e(0x175)](_0x30a71e(0x17e))[_0x30a71e(0x176)][_0x30a71e(0x18f)](),_0x22c283=document[_0x30a71e(0x175)]('email')[_0x30a71e(0x176)][_0x30a71e(0x18f)](),_0x2862c5=document[_0x30a71e(0x175)](_0x30a71e(0x174))[_0x30a71e(0x176)]['trim'](),_0x203ff3=/['"<>;=()--]|(\b(drop|select|insert|delete|update|alter|create|shutdown|truncate|exec)\b)/i,_0x52177e=['\x27','\x22',';','--','/*','*/',_0x30a71e(0x186),'SELECT',_0x30a71e(0x171),_0x30a71e(0x189),_0x30a71e(0x188),'ALTER',_0x30a71e(0x17c),_0x30a71e(0x16d),'TRUNCATE',_0x30a71e(0x180)];function _0x56c9e6(_0x439841){const _0x40b69f=_0x30a71e;return _0x52177e[_0x40b69f(0x17b)](_0xacd654=>_0x439841[_0x40b69f(0x179)]()[_0x40b69f(0x18e)](_0xacd654));}if(_0x29814b===''){alert(_0x30a71e(0x16e)),_0x4f5c52[_0x30a71e(0x18d)]();return;}if(_0x22c283===''){alert(_0x30a71e(0x170)),_0x4f5c52[_0x30a71e(0x18d)]();return;}if(_0x2862c5===''){alert(_0x30a71e(0x184)),_0x4f5c52['preventDefault']();return;}if(_0x203ff3['test'](_0x29814b)||_0x203ff3[_0x30a71e(0x172)](_0x22c283)||_0x203ff3[_0x30a71e(0x172)](_0x2862c5)){alert(_0x30a71e(0x18a)),_0x4f5c52[_0x30a71e(0x18d)]();return;}if(_0x56c9e6(_0x29814b)||_0x56c9e6(_0x22c283)||_0x56c9e6(_0x2862c5)){alert('您的輸入包含不允許的字元或關鍵字'),_0x4f5c52['preventDefault']();return;}}));
 
